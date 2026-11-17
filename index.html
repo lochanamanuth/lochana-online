@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lochana Manuth Bandara | Penetration Tester & Red Team Enthusiast</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Profile Picture -->
+        <div class="profile-box">
+            <!-- Place your photo as profile.jpg in the same folder -->
+            <img src="profile.jpg" alt="Lochana Manuth Bandara" onerror="this.src='https://ui-avatars.com/api/?name=Lochana+Manuth&background=0d1526&color=38bdf8&size=256'">
+        </div>
+
+        <!-- Right Info & Links -->
+        <div class="content">
+            <div class="header-info">
+                <h1 class="name">Lochana Manuth Bandara</h1>
+                <p class="tagline">Penetration Tester | Red Team Enthusiast | CTF Player</p>
+                <span class="handle-badge">@CobraFang</span>
+            </div>
+
+            <div class="section-label">Connect</div>
+
+            <div class="links-grid">
+                <!-- 1. About Me (Popup Modal) -->
+                <a href="#about" class="link-card" onclick="openModal(event)">
+                    <span class="link-left">
+                        <i class="fa-regular fa-user"></i>
+                        <span>About Me</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 2. Blog / CTF Writeups -->
+                <a href="https://lochanamanuth.github.io" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>Blog & Writeups</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 3. GitHub -->
+                <a href="https://github.com/lochanamanuth" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-brands fa-github"></i>
+                        <span>GitHub</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 4. YouTube -->
+                <a href="https://www.youtube.com/@lochanactf" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span>YouTube</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 5. TryHackMe -->
+                <a href="https://tryhackme.com/p/CobraFang" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>TryHackMe</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 6. Hack The Box -->
+                <a href="https://app.hackthebox.com/profile/YOUR_HTB_ID" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>Hack The Box</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 7. LinkedIn -->
+                <a href="https://www.linkedin.com/in/lochana-manuth" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 8. Facebook -->
+                <a href="https://www.facebook.com/YOUR_FACEBOOK_USERNAME" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 9. WhatsApp Channel -->
+                <a href="https://whatsapp.com/channel/YOUR_CHANNEL_ID" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Channel</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+
+                <!-- 10. Discord -->
+                <a href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <span class="link-left">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Discord</span>
+                    </span>
+                    <i class="fa-solid fa-chevron-right arrow"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Me Popup Modal -->
+    <div class="modal-overlay" id="aboutModal" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>About Me</h3>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Hi! I'm <strong>Lochana Manuth Bandara</strong> (aka <strong>CobraFang</strong>), a Cybersecurity Enthusiast, Web Application Penetration Testing Intern, and CTF Player from Sri Lanka.</p>
+                <p>I focus on offensive security, web exploitation, Linux privilege escalation, and building custom security automation tools in Python and C.</p>
+                <p><strong>Contact:</strong> lochana.ctf@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
